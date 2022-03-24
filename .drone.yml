@@ -1,0 +1,14 @@
+kind: pipeline
+type: docker
+name: PoC
+
+steps:
+  - name: Test output without EoL
+    image: alpine:3.12
+    commands:
+      - printf 'Output without EoL'
+      
+  - name: Control group
+    image: alpine:3.12
+    commands:
+      - printf 'Output with EoL\n'
